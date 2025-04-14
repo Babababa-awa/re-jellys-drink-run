@@ -1,0 +1,36 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c5auqo1ey7lam"]
+
+[ext_resource type="Texture2D" uid="uid://d4i3yqe2bf1d4" path="res://assets/image/game/item_box.png" id="1_8ycu0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knkta"]
+texture = ExtResource("1_8ycu0")
+texture_region_size = Vector2i(32, 32)
+0:0/animation_frame_0/duration = 0.2
+0:0/animation_frame_1/duration = 0.2
+0:0/animation_frame_2/duration = 0.2
+0:0/animation_frame_3/duration = 0.2
+0:0/0 = 0
+0:1/animation_frame_0/duration = 0.2
+0:1/animation_frame_1/duration = 0.2
+0:1/animation_frame_2/duration = 0.2
+0:1/animation_frame_3/duration = 0.2
+0:1/0 = 0
+0:2/animation_frame_0/duration = 0.2
+0:2/animation_frame_1/duration = 0.2
+0:2/animation_frame_2/duration = 0.2
+0:2/animation_frame_3/duration = 0.2
+0:2/0 = 0
+0:3/animation_frame_0/duration = 0.2
+0:3/animation_frame_1/duration = 0.2
+0:3/animation_frame_2/duration = 0.2
+0:3/animation_frame_3/duration = 0.2
+0:3/0 = 0
+0:4/animation_frame_0/duration = 0.2
+0:4/animation_frame_1/duration = 0.2
+0:4/animation_frame_2/duration = 0.2
+0:4/animation_frame_3/duration = 0.2
+0:4/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_knkta")

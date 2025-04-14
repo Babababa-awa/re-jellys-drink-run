@@ -1,0 +1,92 @@
+{
+	"type": "platformer",
+	"area": {
+		"alias": "3_apt_2_jelly"
+	},
+	"player": {
+		"alias": "jelly",
+		"position": [96, -64],
+		"mode": "normal"
+	},
+	"locks": [
+		{
+			"alias": "barricade",
+			"type": "obstruction"
+		},
+		{
+			"alias": "2_hallway_service_shaft",
+			"type": "key",
+			"mode": "auto",
+			"unlocked": false,
+			"meta": {
+				"keys": ["master_key", "service_key"]
+			}
+		},
+		{
+			"alias": "3_apt_1",
+			"type": "key",
+			"mode": "manual",
+			"unlocked": false,
+			"bypassable": true,
+			"meta": {
+				"keys": ["master_key"]
+			}
+		},
+		{
+			"alias": "3_hallway_service_shaft",
+			"type": "key",
+			"mode": "auto",
+			"unlocked": false,
+			"meta": {
+				"keys": ["master_key", "service_key"]
+			}
+		},
+		{
+			"alias": "4_hallway_service_shaft",
+			"type": "key",
+			"mode": "auto",
+			"unlocked": false,
+			"meta": {
+				"keys": ["master_key", "service_key"]
+			}
+		},
+		{
+			"alias": "5_apt_2",
+			"type": "key",
+			"mode": "manual",
+			"unlocked": false,
+			"bypassable": true,
+			"meta": {
+				"keys": ["master_key"]
+			}
+		},
+		{
+			"alias": "5_hallway_service_shaft",
+			"type": "key",
+			"mode": "auto",
+			"unlocked": false,
+			"meta": {
+				"keys": ["master_key", "service_key"]
+			}
+		},
+		{
+			"alias": "5_hallway_roof_area",
+			"type": "key",
+			"mode": "auto",
+			"unlocked": false,
+			"meta": {
+				"keys": ["master_key", "roof_key"]
+			}
+		},
+		{
+			"alias": "roof_maintenance_room",
+			"type": "key",
+			"mode": "manual",
+			"unlocked": false,
+			"bypassable": true,
+			"meta": {
+				"keys": ["master_key", "roof_key"]
+			}
+		}
+	]
+}

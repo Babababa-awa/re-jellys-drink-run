@@ -1,0 +1,110 @@
+[gd_scene load_steps=16 format=4 uid="uid://bsnpss60pwxje"]
+
+[ext_resource type="Texture2D" uid="uid://cf74s6emujkku" path="res://assets/image/unit/enemy/rrat.png" id="1_3yavn"]
+[ext_resource type="Script" path="res://scenes/object/enemy/rat_hole.gd" id="1_7da6v"]
+[ext_resource type="TileSet" uid="uid://ixn5gvkvawsq" path="res://resources/level/apartment/decals.tres" id="1_m6ei5"]
+[ext_resource type="PackedScene" uid="uid://bc0uhg8tf53gc" path="res://scenes/unit/enemy/rrat.tscn" id="2_oaik3"]
+[ext_resource type="TileSet" uid="uid://78r07r4s5fac" path="res://resources/field.tres" id="2_smev0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at77r"]
+atlas = ExtResource("1_3yavn")
+region = Rect2(0, 128, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0sr7"]
+atlas = ExtResource("1_3yavn")
+region = Rect2(64, 128, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5e48"]
+atlas = ExtResource("1_3yavn")
+region = Rect2(128, 128, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cakee"]
+atlas = ExtResource("1_3yavn")
+region = Rect2(192, 128, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bonaa"]
+atlas = ExtResource("1_3yavn")
+region = Rect2(256, 128, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsvm7"]
+atlas = ExtResource("1_3yavn")
+region = Rect2(320, 128, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnnhh"]
+atlas = ExtResource("1_3yavn")
+region = Rect2(384, 128, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjkrd"]
+atlas = ExtResource("1_3yavn")
+region = Rect2(448, 128, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56oih"]
+atlas = ExtResource("1_3yavn")
+region = Rect2(512, 128, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x2tos"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at77r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at77r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at77r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at77r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0sr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5e48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cakee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bonaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsvm7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnnhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjkrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56oih")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RatHole" type="Node2D"]
+script = ExtResource("1_7da6v")
+
+[node name="Field" type="TileMapLayer" parent="."]
+visible = false
+tile_map_data = PackedByteArray("AAARAP//AAABAAEAAAAQAP//AAABAAEAAAABAP//AAABAAIAAAAAAP//AAABAAIAAAACAP//AAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAAFAP//AAAAAAAAAAAKAP//AAAAAAAAAAALAP//AAAAAAAAAAAMAP//AAAAAAAAAAANAP//AAAAAAAAAAAOAP//AAAAAAAAAAAPAP//AAAAAAAAAAAGAP//AAAAAAAAAAAHAP//AAAAAAAAAAAIAP//AAAAAAAAAAAJAP//AAAAAAAAAAA=")
+tile_set = ExtResource("2_smev0")
+
+[node name="Decals" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAEAP//AAAAAAEAAAA=")
+tile_set = ExtResource("1_m6ei5")
+
+[node name="RratExit" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(144, -16)
+sprite_frames = SubResource("SpriteFrames_x2tos")
+frame = 6
+frame_progress = 0.718735
+
+[node name="Rrat" parent="." instance=ExtResource("2_oaik3")]
+unique_name_in_owner = true
+position = Vector2(122, 0)

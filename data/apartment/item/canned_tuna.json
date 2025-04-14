@@ -1,0 +1,13 @@
+{
+	"alias": "canned_tuna",
+	"name": "Canned Tuna",
+	"type": "food",
+	"meta": {
+		"hunger": 25.0
+	},
+	"scene": {
+		"path": "res://scenes/unit/item/item.tscn",
+		"tile_set_coords": [7, 0],
+		"scale": [0.5, 0.5]
+	}
+}

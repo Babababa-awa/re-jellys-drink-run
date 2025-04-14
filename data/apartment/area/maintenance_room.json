@@ -1,0 +1,29 @@
+{
+	"alias": "maintenance_room",
+	"name": "Maintenance Room",
+	"doors": [
+		{
+			"alias": "maintenance_room_roof_exit",
+			"area": {
+				"alias": "roof",
+				"position": [704, -32]
+			},
+			"lock": {
+				"pickable": false,
+				"keys": ["master_key", "roof_key"]
+			}
+		},
+		{
+			"alias": "maintenance_room_5_hallway_exit",
+			"area": {
+				"alias": "5_hallway",
+				"position": [256, -224]
+			}
+		}
+	],
+	"items": [
+		{"alias": "service_key", "position": [756, -70]}
+	],
+	"music": null,
+	"ambience": "rain"
+}

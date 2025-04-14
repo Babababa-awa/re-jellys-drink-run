@@ -1,0 +1,60 @@
+{
+	"alias": "5_hallway",
+	"name": "Fifth Floor Hallway",
+	"doors": [
+		{
+			"alias": "5_hallway_5_apt_1_enter",
+			"area": {
+				"alias": "5_apt_1",
+				"position": [736, -32]
+			}
+		},
+		{
+			"alias": "5_hallway_5_apt_2_enter",
+			"area": {
+				"alias": "5_apt_2",
+				"position": [736, -32]
+			}
+		},
+		{
+			"alias": "5_hallway_5_stairwell_enter",
+			"area": {
+				"alias": "5_stairwell",
+				"position": [704, -32]
+			}
+		},
+		{
+			"alias": "5_hallway_4_stairwell_enter",
+			"area": {
+				"alias": "4_stairwell",
+				"position": [128, -256]
+			}
+		},
+		{
+			"alias": "5_hallway_service_shaft_enter",
+			"area": {
+				"alias": "service_shaft",
+				"position": [128, -800]
+			}
+		},
+		{
+			"alias": "5_hallway_side_building_exit",
+			"area": {
+				"alias": "side_building",
+				"position": [1280, 256]
+			}
+		},
+		{
+			"alias": "5_hallway_maintenance_room_enter",
+			"area": {
+				"alias": "maintenance_room",
+				"position": [576, -32]
+			}
+		}
+	],
+	"items": [
+		{"alias": "anxiety_medication", "position": [3048, -48]}
+	],
+	"music": "hallway",
+	"ambience": null
+}

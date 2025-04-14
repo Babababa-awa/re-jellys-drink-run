@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://f8qormnjloar"]
+
+[ext_resource type="PackedScene" uid="uid://tj647lc0mola" path="res://Scenes/Backgrounds/Components/rain.tscn" id="1_hgtlg"]
+[ext_resource type="Script" path="res://Scenes/Backgrounds/rain.gd" id="1_tq42l"]
+
+[node name="Rain" type="ParallaxBackground"]
+script = ExtResource("1_tq42l")
+
+[node name="ParallaxRain" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="Rain0x0" parent="ParallaxRain" instance=ExtResource("1_hgtlg")]
+position = Vector2(-512, 512)
+scale = Vector2(2, 2)
+
+[node name="Rain1x0" parent="ParallaxRain" instance=ExtResource("1_hgtlg")]
+position = Vector2(512, 512)
+scale = Vector2(2, 2)
+
+[node name="Rain2x0" parent="ParallaxRain" instance=ExtResource("1_hgtlg")]
+position = Vector2(1536, 512)
+scale = Vector2(2, 2)
+
+[node name="Rain0x1" parent="ParallaxRain" instance=ExtResource("1_hgtlg")]
+position = Vector2(-512, 1536)
+scale = Vector2(2, 2)
+
+[node name="Rain1x1" parent="ParallaxRain" instance=ExtResource("1_hgtlg")]
+position = Vector2(512, 1536)
+scale = Vector2(2, 2)
+
+[node name="Rain0x2" parent="ParallaxRain" instance=ExtResource("1_hgtlg")]
+position = Vector2(-512, 2560)
+scale = Vector2(2, 2)
+
+[node name="Rain1x2" parent="ParallaxRain" instance=ExtResource("1_hgtlg")]
+position = Vector2(512, 2560)
+scale = Vector2(2, 2)
+
+[node name="Rain0x3" parent="ParallaxRain" instance=ExtResource("1_hgtlg")]
+position = Vector2(-512, 3584)
+scale = Vector2(2, 2)
+
+[node name="Rain1x3" parent="ParallaxRain" instance=ExtResource("1_hgtlg")]
+position = Vector2(512, 3584)
+scale = Vector2(2, 2)
+
+[node name="Rain0x4" parent="ParallaxRain" instance=ExtResource("1_hgtlg")]
+position = Vector2(-512, 4608)
+scale = Vector2(2, 2)
+
+[node name="Rain1x4" parent="ParallaxRain" instance=ExtResource("1_hgtlg")]
+position = Vector2(512, 4608)
+scale = Vector2(2, 2)
+
+[node name="Rain0x5" parent="ParallaxRain" instance=ExtResource("1_hgtlg")]
+position = Vector2(-512, 5632)
+scale = Vector2(2, 2)
+
+[node name="Rain1x5" parent="ParallaxRain" instance=ExtResource("1_hgtlg")]
+position = Vector2(512, 5632)
+scale = Vector2(2, 2)

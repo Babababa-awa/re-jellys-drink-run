@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=4 uid="uid://sxcbtx2yl72e"]
+
+[ext_resource type="TileSet" uid="uid://cnixydfj7xr2c" path="res://resources/level/apartment/windows.tres" id="1_purbh"]
+
+[node name="TileMapLayer" type="TileMapLayer"]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAoAAAAAAAEAAAAAAAsAAAAAAAIAAAAAAAwAAAABAAAAAAABAAoAAAABAAEAAAABAAsAAAABAAIAAAABAAwAAAACAAAAAAACAAoAAAACAAEAAAACAAsAAAACAAIAAAACAAwAAAA=")
+tile_set = ExtResource("1_purbh")

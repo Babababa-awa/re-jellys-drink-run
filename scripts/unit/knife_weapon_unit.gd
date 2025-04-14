@@ -1,0 +1,2 @@
+extends WeaponUnit
+class_name KnifeWeaponUnit

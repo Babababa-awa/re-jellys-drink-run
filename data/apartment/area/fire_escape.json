@@ -1,0 +1,11 @@
+{
+	"alias": "fire_escape",
+	"name": "Fire Escape",
+	"player": {
+		"position": [768, 96],
+		"mode": "climbing"
+	},
+	"music": null,
+	"ambience": "rain",
+	"outside": true
+}

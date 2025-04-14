@@ -1,0 +1,53 @@
+{
+	"alias": "2_hallway",
+	"name": "Second Floor Hallway",
+	"doors": [
+		{
+			"alias": "2_hallway_2_apt_1_enter",
+			"area": {
+				"alias": "2_apt_1",
+				"position": [736, -32]
+			}
+		},
+		{
+			"alias": "2_hallway_2_apt_2_enter",
+			"area": {
+				"alias": "2_apt_2",
+				"position": [736, -32]
+			}
+		},
+		{
+			"alias": "2_hallway_2_stairwell_enter",
+			"area": {
+				"alias": "2_stairwell",
+				"position": [704, -32]
+			}
+		},
+		{
+			"alias": "2_hallway_1_stairwell_enter",
+			"area": {
+				"alias": "1_stairwell",
+				"position": [128, -256]
+			}
+		},
+		{
+			"alias": "2_hallway_service_shaft_enter",
+			"area": {
+				"alias": "service_shaft",
+				"position": [128, -416]
+			}
+		},
+		{
+			"alias": "2_hallway_side_building_exit",
+			"area": {
+				"alias": "side_building",
+				"position": [1280, 928]
+			}
+		}
+	],
+	"items": [
+		{"alias": "energy_drink", "position": [128, -48]}
+	],
+	"music": "hallway",
+	"ambience": null
+}

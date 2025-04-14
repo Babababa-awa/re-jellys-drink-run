@@ -1,0 +1,39 @@
+{
+	"alias": "service_shaft",
+	"name": "Service Shaft",
+	"doors": [
+		{
+			"alias": "service_shaft_2_hallway_exit",
+			"area": {
+				"alias": "2_hallway",
+				"position": [992, -32]
+			}
+		},
+		{
+			"alias": "service_shaft_3_hallway_exit",
+			"area": {
+				"alias": "3_hallway",
+				"position": [992, -32]
+			}
+		},
+		{
+			"alias": "service_shaft_4_hallway_exit",
+			"area": {
+				"alias": "4_hallway",
+				"position": [992, -32]
+			}
+		},
+		{
+			"alias": "service_shaft_5_hallway_exit",
+			"area": {
+				"alias": "5_hallway",
+				"position": [992, -32]
+			}
+		}
+	],
+	"items": [
+		{"alias": "cigarettes", "position": [184, -80]}
+	],
+	"music": null,
+	"ambience": "rain"
+}

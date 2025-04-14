@@ -1,0 +1,19 @@
+{
+	"alias": "5_apt_2",
+	"name": "Apartment 5-2",
+	"doors": [
+		{
+			"alias": "5_apt_2_5_hallway_exit",
+			"area": {
+				"alias": "5_hallway",
+				"position": [416, -32]
+			}
+		}
+	],
+	"items": [
+		{"alias": "banana", "position": [1032, -80], "visible": false, "meta": {"object": "fridge"}},
+		{"alias": "master_key", "position": [160, -48]}
+	],
+	"music": "room",
+	"ambience": null
+}

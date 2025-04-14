@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=4 uid="uid://0h3tfgvfrlbr"]
+
+[ext_resource type="TileSet" uid="uid://bj4i6tso16k8r" path="res://resources/level/apartment/paintings.tres" id="1_o4u2u"]
+
+[node name="Painting4" type="Node2D"]
+
+[node name="Picture" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAFAAMAAAAAAAEAAAAFAAQAAAAAAAIAAAAFAAUAAAAAAAMAAAAFAAYAAAABAAAAAAAGAAMAAAABAAEAAAAGAAQAAAABAAIAAAAGAAUAAAABAAMAAAAGAAYAAAACAAAAAAAHAAMAAAACAAEAAAAHAAQAAAACAAIAAAAHAAUAAAACAAMAAAAHAAYAAAA=")
+tile_set = ExtResource("1_o4u2u")
+
+[node name="Frame" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAACAAAAAAABAAAAAAAAAAMAAAAAAAEAAAACAAMAAAABAAEAAAABAAAAAAACAAAAAAABAAMAAAACAAEAAAAAAAEAAAAAAAIAAAAAAAIAAAAAAAIAAAACAAEAAAABAAIAAAACAAIAAAABAAIAAAA=")
+tile_set = ExtResource("1_o4u2u")

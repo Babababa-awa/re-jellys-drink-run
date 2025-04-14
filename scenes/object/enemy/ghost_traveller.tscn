@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=4 uid="uid://dej4mk1yedpiv"]
+
+[ext_resource type="Script" path="res://scenes/object/enemy/ghost_traveller.gd" id="1_wn313"]
+[ext_resource type="TileSet" uid="uid://78r07r4s5fac" path="res://resources/field.tres" id="2_ur8ui"]
+[ext_resource type="PackedScene" uid="uid://d05q3qwm438tf" path="res://scenes/unit/enemy/ghost.tscn" id="3_xebnm"]
+
+[node name="GhostTraveller" type="Node2D"]
+script = ExtResource("1_wn313")
+
+[node name="Field" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+tile_map_data = PackedByteArray("AAAAAP//AAABAAIAAAABAP//AAABAAIAAAACAP//AAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAABAAEAAAAFAP//AAABAAEAAAACAP7/AAAAAAAAAAACAP3/AAAAAAAAAAADAP3/AAAAAAAAAAADAP7/AAAAAAAAAAAEAP7/AAABAAEAAAAEAP3/AAABAAEAAAAFAP3/AAABAAEAAAAFAP7/AAABAAEAAAAAAP7/AAABAAIAAAAAAP3/AAABAAIAAAABAP3/AAABAAIAAAABAP7/AAABAAIAAAA=")
+tile_set = ExtResource("2_ur8ui")
+
+[node name="Ghost" parent="." instance=ExtResource("3_xebnm")]
+unique_name_in_owner = true
+position = Vector2(48, 0)

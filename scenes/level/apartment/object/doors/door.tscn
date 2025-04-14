@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://y7emk8leigvp"]
+
+[ext_resource type="TileSet" uid="uid://c6c4x0fbilo4g" path="res://resources/level/apartment/doors.tres" id="1_bjter"]
+[ext_resource type="Script" path="res://scenes/level/apartment/object/doors/door.gd" id="1_smyta"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4k7tp"]
+size = Vector2(28, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53pmg"]
+size = Vector2(28, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iq6c1"]
+size = Vector2(160, 96)
+
+[node name="Door" type="Node2D"]
+script = ExtResource("1_smyta")
+
+[node name="Door" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+tile_map_data = PackedByteArray(0, 0, 1, 0, 253, 255, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 254, 255, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 255, 255, 0, 0, 0, 0, 2, 0, 0, 0)
+tile_set = ExtResource("1_bjter")
+
+[node name="Area2DLeftSide" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DLeftSide"]
+position = Vector2(30, -48)
+shape = SubResource("RectangleShape2D_4k7tp")
+
+[node name="Area2DRightSide" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DRightSide"]
+position = Vector2(66, -48)
+shape = SubResource("RectangleShape2D_53pmg")
+
+[node name="Area2DVicinity" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DVicinity"]
+position = Vector2(48, -48)
+shape = SubResource("RectangleShape2D_iq6c1")

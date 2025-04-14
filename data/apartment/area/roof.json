@@ -1,0 +1,24 @@
+{
+	"alias": "roof",
+	"name": "Roof",
+	"doors": [
+		{
+			"alias": "roof_5_stairwell_enter",
+			"area": {
+				"alias": "5_stairwell",
+				"position": [128, -256]
+			}
+		},
+		{
+			"alias": "roof_maintenance_room_enter",
+			"area": {
+				"alias": "maintenance_room",
+				"position": [128, -32]
+			}
+		}
+	],
+	"music": "roof",
+	"ambience": "rain",
+	"outside": true,
+	"lightning": true
+}

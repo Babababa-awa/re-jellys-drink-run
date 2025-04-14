@@ -1,0 +1,13 @@
+{
+	"alias": "kitchen_knife",
+	"name": "Kitchen Knife",
+	"type": "knife",
+	"meta": {
+		"strength": 1
+	},
+	"scene": {
+		"path": "res://scenes/unit/item/item.tscn",
+		"tile_set_coords": [0, 0],
+		"scale": [0.5, 0.5]
+	}
+}

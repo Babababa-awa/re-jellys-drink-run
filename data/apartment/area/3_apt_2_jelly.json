@@ -1,0 +1,19 @@
+{
+	"alias": "3_apt_2_jelly",
+	"name": "Jelly's Apartment",
+	"doors": [
+		{
+			"alias": "3_apt_2_3_hallway_exit",
+			"area": {
+				"alias": "3_hallway",
+				"position": [416, -32]
+			}
+		}
+	],
+	"items": [
+		{"alias": "kitchen_knife", "position": [868, -102]},
+		{"alias": "meal_replacement", "position": [1000, -80], "visible": false, "meta": {"object": "fridge"}}
+	],
+	"music": null,
+	"ambience": "rain"
+}

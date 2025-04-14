@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://da8qwlgkjyv1p"]
+
+[ext_resource type="TileSet" uid="uid://dkq0x8vybft0f" path="res://Resources/TileSets/apartment.tres" id="1_01cll"]
+
+[node name="FireExit" type="TileMap"]
+tile_set = ExtResource("1_01cll")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65536, 983040, 12, -65535, 1048576, 12, -65534, 1114112, 12, -65533, 1179648, 12, -65532, 1245184, 12)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=4 uid="uid://d5ietokrqotw"]
+
+[ext_resource type="TileSet" uid="uid://bj4i6tso16k8r" path="res://resources/level/apartment/paintings.tres" id="1_rbgcj"]
+[ext_resource type="TileSet" uid="uid://ixn5gvkvawsq" path="res://resources/level/apartment/decals.tres" id="2_pcbjw"]
+
+[node name="Painting3" type="Node2D"]
+
+[node name="Picture" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAADAAcAAAAAAAEAAAADAAgAAAAAAAIAAAADAAkAAAABAAAAAAAEAAcAAAABAAEAAAAEAAgAAAABAAIAAAAEAAkAAAACAAAAAAAFAAcAAAACAAEAAAAFAAgAAAACAAIAAAAFAAkAAAADAAAAAAAGAAcAAAADAAEAAAAGAAgAAAADAAIAAAAGAAkAAAA=")
+tile_set = ExtResource("1_rbgcj")
+
+[node name="Blood" type="TileMapLayer" parent="."]
+position = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAAAAAAAAAIAAAAAAAAAAEAAAAIAAEAAAABAAAAAAAGAAAAAAA=")
+tile_set = ExtResource("2_pcbjw")
+
+[node name="Frame" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAADAAAAAAABAAAAAAADAAIAAAABAAEAAAAAAAIAAAAAAAEAAAAAAAEAAAAAAAIAAAABAAAAAAACAAAAAAACAAAAAAACAAAAAAADAAEAAAABAAIAAAABAAIAAAACAAEAAAACAAIAAAACAAEAAAA=")
+tile_set = ExtResource("1_rbgcj")

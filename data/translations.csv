@@ -1,0 +1,75 @@
+Key,en,jp
+BUTTON_START,Start,スタート
+BUTTON_SETTINGS,Settings,ゲーム設定
+BUTTON_CONTROLS,Controls,操作設定
+BUTTON_EXIT,Exit Game,ゲーム終了
+BUTTON_BACK,Go Back,戻る
+BUTTON_CONTINUE,Continue Playing,ゲーム再開
+BUTTON_OK,OK,オーケー
+BUTTON_MENU,Stop Playing,ゲーム終了
+BUTTON_REPLAY,Play Again,もう一度プレイ
+BUTTON_REPLAY_NORMAL,Play Again on Normal,普通でまたプレイ
+BUTTON_REPLAY_HARD,Play Again on Hard,難しいでまたプレイ
+BUTTON_RETRY,Try Again,もう一度挑戦
+BUTTON_RETRY_EASY,Try Again as a Journalist,普通でもう一度挑戦
+BUTTON_RETRY_NORMAL,Try Again on Normal,難しいでもう一度挑戦
+BUTTON_LOCALE:en,English,English
+BUTTON_LOCALE:jp,日本語,日本語
+TITLE_SETTINGS,Settings,ゲーム設定
+TITLE_COMMAND,Command,コマンド
+TITLE_KEYBOARD,Keyboard,キーボード
+TITLE_MOUSE,Mouse,マウス
+TITLE_CONTROLLER,Controller,コントローラー
+TITLE_PAUSED,Paused,一時停止
+TITLE_WIN,Pink Drink Acquired!,ピンクドリンクを入手！
+TITLE_LOSE,You Died!,死んだ！
+TITLE_DIFFICULTY,Select Difficulty,難易度選択
+DIFFICULTY_EASY,Journalist,ジャーナリスト
+DIFFICULTY_NORMAL,Normal,普通
+DIFFICULTY_HARD,Hard,難しい
+LABEL_MUSIC,Music,音楽
+LABEL_SFX,SFX,効果音
+LABEL_AMBIENCE,Ambience,環境音
+LABEL_TIME,Play Time:,プレイ時間：
+HUD_ITEMS,Items,アイテム
+HUD_HUNGER,Hunger,飢え
+HUD_HEALTH,Anxiety,不安
+ITEM:cigarettes,Cigarettes,タバコ
+ITEM:kitchen_knife,Kitchen Knife,包丁
+ITEM:lock_pick,Lock Pick,ロックピック
+ITEM:anxiety_medication,Anxiety Medication,不安薬
+ITEM:banana,Bananas,バナナ
+ITEM:canned_tune,Canned Tuna,ツナ缶
+ITEM:chicken_dinner,Chicken Dinner,チキンディナー
+ITEM:energy_drink,Energy Drink,エナジードリンク
+ITEM:master_key,Master Key,マスターキー
+ITEM:meal_replacement,Meal Replacement,完全栄養ドリンク
+ITEM:moo_deng_jerky,Moo Deng Jerky,ムーデンジャーキー
+ITEM:service_key,Service Key,サービスキー
+NOTICE:glass,"This glass looks sharp. 
+I better tread lightly.","このグラスはシャープに見えます。
+軽やかに歩いたほうがいいですね。"
+NOTICE:side_building_fire_escape,"The fire escape is broken…
+I'll have to find a different way out.","非常階段が壊れてる…
+別の出口を探さないと。"
+NOTICE:floor_2_barricade,I’m not getting out this way...,こっちからは出られないか…
+TALK:roof_awoo,Awooo,オオーン
+TALK:roof_ledge,"That ladder is
+my exit!","あの梯子が
+出口です"
+TALK:roof_below,"I need to get
+up to that ladder","あの梯子に
+登らなきゃ"
+TALK:fire_escape,Almost there!,もうすぐです
+TALK:cigarettes,"So much for
+quitting…","辞めるのは
+無理だった！"
+TALK:jelly_1,"I want a
+Pink Drink!","ピンクのドリンクが
+ほしいです！"
+TALK:jelly_2,Waaaaaaaaaaaah!,わああああああん！！！
+TALK:locked,It’s locked!,鍵がかかってます！
+TALK:barricaded,It's barricaded!,バリケードされてる！
+TALK:picked,"Awawa!
+Picked!","アワワ！
+開いた！"

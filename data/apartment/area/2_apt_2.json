@@ -1,0 +1,17 @@
+{
+	"alias": "2_apt_2",
+	"name": "Apartment 2-2",
+	"doors": [
+		{
+			"alias": "2_apt_2_2_hallway_exit",
+			"area": {
+				"alias": "2_hallway",
+				"position": [416, -32]
+			}
+		}
+	],
+	"items": [
+	],
+	"music": "room",
+	"ambience": null
+}

@@ -1,0 +1,15 @@
+{
+	"alias": "3_apt_1",
+	"name": "Apartment 3-1",
+	"doors": [
+		{
+			"alias": "3_apt_1_3_hallway_exit",
+			"area": {
+				"alias": "3_hallway",
+				"position": [1536, -32]
+			}
+		}
+	],
+	"music": "room",
+	"ambience": null
+}

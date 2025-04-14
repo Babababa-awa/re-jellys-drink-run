@@ -1,0 +1,18 @@
+{
+	"alias": "4_apt_2",
+	"name": "Apartment 4-2",
+	"doors": [
+		{
+			"alias": "4_apt_2_4_hallway_exit",
+			"area": {
+				"alias": "4_hallway",
+				"position": [416, -32]
+			}
+		}
+	],
+	"items": [
+		{"alias": "chicken_dinner", "position": [1032, -80], "visible": false, "meta": {"object": "fridge"}}
+    ],
+	"music": "room",
+	"ambience": null
+}

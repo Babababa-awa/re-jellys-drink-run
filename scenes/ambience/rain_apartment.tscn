@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://pq7ekm4aocwk"]
+
+[ext_resource type="Script" path="res://scenes/ambience/rain_apartment.gd" id="1_rdbm3"]
+[ext_resource type="PackedScene" uid="uid://dmggmhm5xmwb0" path="res://scenes/ambience/rain.tscn" id="2_klw3h"]
+
+[node name="RainApartment" type="Node2D"]
+z_index = 4
+z_as_relative = false
+script = ExtResource("1_rdbm3")
+
+[node name="Rain1" parent="." instance=ExtResource("2_klw3h")]
+unique_name_in_owner = true
+
+[node name="Rain2" parent="." instance=ExtResource("2_klw3h")]
+unique_name_in_owner = true
+
+[node name="Rain3" parent="." instance=ExtResource("2_klw3h")]
+unique_name_in_owner = true
+
+[node name="Rain4" parent="." instance=ExtResource("2_klw3h")]
+unique_name_in_owner = true
+
+[node name="Rain5" parent="." instance=ExtResource("2_klw3h")]
+unique_name_in_owner = true
+
+[node name="Rain6" parent="." instance=ExtResource("2_klw3h")]
+unique_name_in_owner = true

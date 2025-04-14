@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://11ogenukjdu5"]
+
+[ext_resource type="Script" path="res://scenes/object/enemy/glass.gd" id="1_76ap2"]
+[ext_resource type="TileSet" uid="uid://ch4rbun5l34q" path="res://resources/enemy/glass.tres" id="1_xjuce"]
+[ext_resource type="PackedScene" uid="uid://cxx07r8g5gvut" path="res://scenes/control/area_2d_attack.tscn" id="2_1x7qc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_chidf"]
+resource_local_to_scene = true
+size = Vector2(32, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndb6t"]
+resource_local_to_scene = true
+size = Vector2(48, 7)
+
+[node name="Glass" type="Node2D"]
+script = ExtResource("1_76ap2")
+
+[node name="Glass" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = ExtResource("1_xjuce")
+
+[node name="Area2DAttack" parent="." instance=ExtResource("2_1x7qc")]
+collision_mask = 0
+damage = 10.0
+movement = true
+min_speed = 0
+groups = Array[StringName]([&"player"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DAttack"]
+unique_name_in_owner = true
+position = Vector2(16, -3.5)
+shape = SubResource("RectangleShape2D_chidf")
+
+[node name="Area2DSpeech" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DSpeech"]
+position = Vector2(-24, -4)
+shape = SubResource("RectangleShape2D_ndb6t")
+
+[connection signal="body_entered" from="Area2DSpeech" to="." method="_on_area_2d_speech_body_entered"]

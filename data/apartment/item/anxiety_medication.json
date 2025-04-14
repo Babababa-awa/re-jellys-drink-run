@@ -1,0 +1,13 @@
+{
+	"alias": "anxiety_medication",
+	"name": "Anxiety Medication",
+	"type": "health",
+	"meta": {
+		"health": 35.0
+	},
+	"scene": {
+		"path": "res://scenes/unit/item/item.tscn",
+		"tile_set_coords": [1, 0],
+		"scale": [0.5, 0.5]
+	}
+}

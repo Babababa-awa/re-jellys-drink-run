@@ -1,0 +1,25 @@
+{
+	"alias": "5_stairwell",
+	"name": "Fifth Floor Stairwell",
+	"doors": [
+		{
+			"alias": "5_stairwell_5_hallway_exit",
+			"area": {
+				"alias": "5_hallway",
+				"position": [2432, -32]
+			}
+		},
+		{
+			"alias": "5_stairwell_roof_exit",
+			"area": {
+				"alias": "roof",
+				"position": [3008, -32]
+			}
+		}
+	],
+	"items": [
+		{"alias": "energy_drink", "position": [48, -272]}
+	],
+	"music": "hallway",
+	"ambience": null
+}

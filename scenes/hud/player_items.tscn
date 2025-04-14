@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://celc1gq31jyqs"]
+
+[ext_resource type="Script" path="res://scenes/hud/player_items.gd" id="1_j40rb"]
+[ext_resource type="PackedScene" uid="uid://wb3chxoe4nqn" path="res://scenes/hud/hud_item.tscn" id="2_nvsan"]
+[ext_resource type="PackedScene" uid="uid://cwis5t0v2ekor" path="res://scenes/hud/hud_label.tscn" id="4_coebj"]
+[ext_resource type="FontFile" uid="uid://cbicpda2mxl8w" path="res://assets/font/fafo_sans_bold.otf" id="4_es5fc"]
+
+[node name="PlayerItems" type="Node2D"]
+script = ExtResource("1_j40rb")
+
+[node name="HudItem1" parent="." instance=ExtResource("2_nvsan")]
+unique_name_in_owner = true
+position = Vector2(0, -64)
+
+[node name="HudItem2" parent="." instance=ExtResource("2_nvsan")]
+unique_name_in_owner = true
+position = Vector2(68, -64)
+
+[node name="HudItem3" parent="." instance=ExtResource("2_nvsan")]
+unique_name_in_owner = true
+position = Vector2(136, -64)
+
+[node name="HudItem4" parent="." instance=ExtResource("2_nvsan")]
+unique_name_in_owner = true
+position = Vector2(204, -64)
+
+[node name="HudLabel" parent="." instance=ExtResource("4_coebj")]
+offset_left = 2.0
+offset_top = -82.0
+offset_right = 52.0
+offset_bottom = -62.0
+theme_override_fonts/font = ExtResource("4_es5fc")
+theme_override_font_sizes/font_size = 18
+text = "HUD_ITEMS"
+
+[node name="HudLabel1" parent="." instance=ExtResource("4_coebj")]
+unique_name_in_owner = true
+offset_left = 7.0
+offset_top = -60.0
+offset_right = 12.0
+offset_bottom = -46.0
+theme_override_fonts/font = ExtResource("4_es5fc")
+theme_override_font_sizes/font_size = 12
+text = "1"
+
+[node name="HudLabel2" parent="." instance=ExtResource("4_coebj")]
+unique_name_in_owner = true
+offset_left = 75.0
+offset_top = -60.0
+offset_right = 82.0
+offset_bottom = -46.0
+theme_override_fonts/font = ExtResource("4_es5fc")
+theme_override_font_sizes/font_size = 12
+text = "2"
+
+[node name="HudLabel3" parent="." instance=ExtResource("4_coebj")]
+unique_name_in_owner = true
+offset_left = 143.0
+offset_top = -60.0
+offset_right = 150.0
+offset_bottom = -46.0
+theme_override_fonts/font = ExtResource("4_es5fc")
+theme_override_font_sizes/font_size = 12
+text = "3"
+
+[node name="HudLabel4" parent="." instance=ExtResource("4_coebj")]
+unique_name_in_owner = true
+offset_left = 211.0
+offset_top = -60.0
+offset_right = 218.0
+offset_bottom = -46.0
+theme_override_fonts/font = ExtResource("4_es5fc")
+theme_override_font_sizes/font_size = 12
+text = "4"
+
+[node name="HudLabelName" parent="." instance=ExtResource("4_coebj")]
+unique_name_in_owner = true
+visible = false
+offset_left = 70.0
+offset_top = -82.0
+offset_right = 266.0
+offset_bottom = -64.0
+theme_override_fonts/font = ExtResource("4_es5fc")
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 2
+vertical_alignment = 2

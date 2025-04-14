@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgfpqtfcsmbdy"]
+
+[ext_resource type="TileSet" uid="uid://dqxq40gyed84" path="res://resources/level/apartment/sakana.tres" id="1_ep3hx"]
+
+[node name="Sakana" type="Node2D"]
+
+[node name="Sakana" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = ExtResource("1_ep3hx")

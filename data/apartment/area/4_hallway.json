@@ -1,0 +1,50 @@
+{
+	"alias": "4_hallway",
+	"name": "Fourth Floor Hallway",
+	"doors": [
+		{
+			"alias": "4_hallway_4_apt_1_enter",
+			"area": {
+				"alias": "4_apt_1",
+				"position": [736, -32]
+			}
+		},
+		{
+			"alias": "4_hallway_4_apt_2_enter",
+			"area": {
+				"alias": "4_apt_2",
+				"position": [736, -32]
+			}
+		},
+		{
+			"alias": "4_hallway_4_stairwell_enter",
+			"area": {
+				"alias": "4_stairwell",
+				"position": [704, -32]
+			}
+		},
+		{
+			"alias": "4_hallway_3_stairwell_enter",
+			"area": {
+				"alias": "3_stairwell",
+				"position": [128, -256]
+			}
+		},
+		{
+			"alias": "4_hallway_service_shaft_enter",
+			"area": {
+				"alias": "service_shaft",
+				"position": [128, -608]
+			}
+		},
+		{
+			"alias": "4_hallway_side_building_exit",
+			"area": {
+				"alias": "side_building",
+				"position": [1280, 480]
+			}
+		}
+	],
+	"music": "hallway",
+	"ambience": null
+}

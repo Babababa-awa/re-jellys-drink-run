@@ -1,0 +1,31 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c7yqi5tsq2xlq"]
+
+[ext_resource type="Texture2D" uid="uid://84gwvkrp5nf3" path="res://assets/image/game/hud_item.png" id="1_gnlrj"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3u74h"]
+texture = ExtResource("1_gnlrj")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+3:1/0 = 0
+3:2/0 = 0
+3:3/0 = 0
+3:4/0 = 0
+2:4/0 = 0
+1:4/0 = 0
+0:4/0 = 0
+0:3/0 = 0
+0:2/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+
+[resource]
+tile_size = Vector2i(64, 64)
+sources/1 = SubResource("TileSetAtlasSource_3u74h")

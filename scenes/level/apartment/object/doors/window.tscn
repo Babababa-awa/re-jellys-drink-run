@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://lje1niltkiiy"]
+
+[ext_resource type="Script" path="res://scenes/level/apartment/object/doors/window.gd" id="1_mvv7u"]
+[ext_resource type="TileSet" uid="uid://cnixydfj7xr2c" path="res://resources/level/apartment/windows.tres" id="2_epf05"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b68id"]
+size = Vector2(64, 84)
+
+[node name="Window" type="Node2D"]
+script = ExtResource("1_mvv7u")
+door_type = 0
+
+[node name="Window" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+tile_map_data = PackedByteArray(0, 0, 0, 0, 251, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 252, 255, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 253, 255, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 4, 0, 0, 0)
+tile_set = ExtResource("2_epf05")
+
+[node name="Area2DVicinity" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DVicinity"]
+position = Vector2(32, -42)
+shape = SubResource("RectangleShape2D_b68id")

@@ -1,0 +1,38 @@
+{
+	"alias": "side_building",
+	"name": "West Side Fire Escape",
+	"doors": [
+		{
+			"alias": "side_building_2_hallway_enter",
+			"area": {
+				"alias": "2_hallway",
+				"position": [32, -32]
+			}
+		},
+		{
+			"alias": "side_building_3_hallway_enter",
+			"area": {
+				"alias": "3_hallway",
+				"position": [32, -32]
+			}
+		},
+		{
+			"alias": "side_building_4_hallway_enter",
+			"area": {
+				"alias": "4_hallway",
+				"position": [32, -32]
+			}
+		},
+		{
+			"alias": "side_building_5_hallway_enter",
+			"area": {
+				"alias": "5_hallway",
+				"position": [32, -32]
+			}
+		}
+	],
+	"items": [],
+	"music": null,
+	"ambience": "rain",
+	"outside": true
+}

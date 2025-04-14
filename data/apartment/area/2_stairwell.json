@@ -1,0 +1,25 @@
+{
+	"alias": "2_stairwell",
+	"name": "Second Floor Stairwell",
+	"doors": [
+		{
+			"alias": "2_stairwell_2_hallway_exit",
+			"area": {
+				"alias": "2_hallway",
+				"position": [2432, -32]
+			}
+		},
+		{
+			"alias": "2_stairwell_3_hallway_exit",
+			"area": {
+				"alias": "3_hallway",
+				"position": [3008, -32]
+			}
+		}
+	],
+	"items": [
+		{"alias": "canned_tuna", "position": [760, -320]}
+	],
+	"music": "hallway",
+	"ambience": null
+}

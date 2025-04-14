@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdirsb7f7858b"]
+
+[ext_resource type="TileSet" uid="uid://dkq0x8vybft0f" path="res://Resources/TileSets/apartment.tres" id="1_3d4hi"]
+
+[node name="Manager" type="TileMap"]
+tile_set = ExtResource("1_3d4hi")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65536, 589824, 9, -65535, 655360, 9, -65534, 720896, 9, -65533, 786432, 9)

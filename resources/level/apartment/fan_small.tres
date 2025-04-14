@@ -1,0 +1,16 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://b7vv15gvbp6ot"]
+
+[ext_resource type="Texture2D" uid="uid://cjekg3ny6vqdd" path="res://assets/image/level/apartment/fan_small.png" id="1_n0dl2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2y1vj"]
+texture = ExtResource("1_n0dl2")
+texture_region_size = Vector2i(24, 24)
+0:0/animation_frame_0/duration = 0.125
+0:0/animation_frame_1/duration = 0.125
+0:0/animation_frame_2/duration = 0.125
+0:0/animation_frame_3/duration = 0.125
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(24, 24)
+sources/0 = SubResource("TileSetAtlasSource_2y1vj")

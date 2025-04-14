@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://d4cnaxp6g4f2h"]
+
+[ext_resource type="Script" path="res://scenes/hud/player_hunger.gd" id="1_osaoo"]
+[ext_resource type="Texture2D" uid="uid://b575lq82335sn" path="res://assets/image/game/hud_hunger_bar_over.png" id="2_88cmv"]
+[ext_resource type="PackedScene" uid="uid://cwis5t0v2ekor" path="res://scenes/hud/hud_label.tscn" id="3_s4j3v"]
+[ext_resource type="FontFile" uid="uid://cbicpda2mxl8w" path="res://assets/font/fafo_sans_bold.otf" id="4_0me7y"]
+
+[sub_resource type="Gradient" id="Gradient_r0x3g"]
+colors = PackedColorArray(0, 0, 0, 0.768627, 0, 0, 0, 0.501961)
+
+[sub_resource type="Gradient" id="Gradient_may4k"]
+colors = PackedColorArray(0.594992, 0, 0.133455, 1, 0.87451, 0, 0.137255, 1)
+
+[node name="PlayerHunger" type="Node2D"]
+script = ExtResource("1_osaoo")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, 12)
+
+[node name="Line2DUnder" type="Line2D" parent="Marker2D"]
+points = PackedVector2Array(4, 0, 380, 0)
+width = 16.0
+gradient = SubResource("Gradient_r0x3g")
+
+[node name="Line2DCurrent" type="Line2D" parent="Marker2D"]
+unique_name_in_owner = true
+points = PackedVector2Array(4, 0, 380, 0)
+width = 16.0
+gradient = SubResource("Gradient_may4k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(192, 12)
+texture = ExtResource("2_88cmv")
+
+[node name="HudLabel" parent="." instance=ExtResource("3_s4j3v")]
+offset_left = 2.0
+offset_top = 24.0
+offset_right = 59.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("4_0me7y")
+theme_override_font_sizes/font_size = 18
+text = "HUD_HUNGER"

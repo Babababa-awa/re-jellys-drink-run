@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckxhixn86vdbv"]
+
+[ext_resource type="TileSet" uid="uid://dkq0x8vybft0f" path="res://Resources/TileSets/apartment.tres" id="1_wuti5"]
+[ext_resource type="Script" path="res://Scenes/Levels/Apartment/Text/door_floor.gd" id="2_vfv7y"]
+
+[node name="DoorFloor" type="TileMap"]
+tile_set = ExtResource("1_wuti5")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65536, 983040, 2, -65535, 983040, 5)
+script = ExtResource("2_vfv7y")

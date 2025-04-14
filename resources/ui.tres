@@ -1,0 +1,99 @@
+[gd_resource type="Theme" load_steps=17 format=3 uid="uid://dpyw2bfpkciiu"]
+
+[ext_resource type="Texture2D" uid="uid://g8jisel44skl" path="res://assets/ui/button_focus.png" id="1_qwg48"]
+[ext_resource type="Texture2D" uid="uid://7w34yup8k26t" path="res://assets/ui/button_normal.png" id="1_rm3mn"]
+[ext_resource type="Texture2D" uid="uid://byqvhok47a4qd" path="res://assets/ui/button_hover.png" id="2_qduj4"]
+[ext_resource type="Texture2D" uid="uid://cqyv4c8gxd84n" path="res://assets/ui/button_pressed.png" id="4_t8mcp"]
+[ext_resource type="Texture2D" uid="uid://cqjvn3jio4lid" path="res://assets/ui/hslider_grabber.png" id="5_s6xnw"]
+[ext_resource type="Texture2D" uid="uid://ddmdvxtkjcq14" path="res://assets/ui/hslider_grabber_highlight.png" id="6_4mjjk"]
+[ext_resource type="Texture2D" uid="uid://7c072xy2xs7e" path="res://assets/ui/hslider_grabber_area.png" id="7_vsimv"]
+[ext_resource type="Texture2D" uid="uid://do5aoj2kswjuk" path="res://assets/ui/hslider_grabber_area_highlight.png" id="8_aaax3"]
+[ext_resource type="Texture2D" uid="uid://dvtcob0ot053a" path="res://assets/ui/hslider_slider.png" id="9_cpxmn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5r71"]
+texture = ExtResource("1_qwg48")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wwgfe"]
+texture = ExtResource("2_qduj4")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7k6ro"]
+texture = ExtResource("1_rm3mn")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0n1ff"]
+texture = ExtResource("4_t8mcp")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7wnfb"]
+texture = ExtResource("7_vsimv")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_bottom = 12.0
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rikgr"]
+texture = ExtResource("8_aaax3")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_bottom = 12.0
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75jbn"]
+texture = ExtResource("9_cpxmn")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0.254902, 0, 0.388235, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 4
+Button/font_sizes/font_size = 32
+Button/styles/focus = SubResource("StyleBoxTexture_j5r71")
+Button/styles/hover = SubResource("StyleBoxTexture_wwgfe")
+Button/styles/normal = SubResource("StyleBoxTexture_7k6ro")
+Button/styles/pressed = SubResource("StyleBoxTexture_0n1ff")
+GridContainer/constants/h_separation = 16
+GridContainer/constants/v_separation = 16
+HBoxContainer/constants/separation = 16
+HSlider/icons/grabber = ExtResource("5_s6xnw")
+HSlider/icons/grabber_highlight = ExtResource("6_4mjjk")
+HSlider/styles/grabber_area = SubResource("StyleBoxTexture_7wnfb")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_rikgr")
+HSlider/styles/slider = SubResource("StyleBoxTexture_75jbn")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0.254902, 0, 0.388235, 1)
+Label/colors/font_shadow_color = Color(0.254902, 0, 0.388235, 1)
+Label/constants/outline_size = 4
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 0
+Label/constants/shadow_outline_size = 0
+Label/font_sizes/font_size = 28
+MarginContainer/constants/margin_bottom = 48
+MarginContainer/constants/margin_left = 48
+MarginContainer/constants/margin_right = 48
+MarginContainer/constants/margin_top = 48
+VBoxContainer/constants/separation = 16

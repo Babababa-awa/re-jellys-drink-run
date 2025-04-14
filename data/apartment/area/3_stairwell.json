@@ -1,0 +1,22 @@
+{
+	"alias": "3_stairwell",
+	"name": "Third Floor Stairwell",
+	"doors": [
+		{
+			"alias": "3_stairwell_3_hallway_exit",
+			"area": {
+				"alias": "3_hallway",
+				"position": [2432, -32]
+			}
+		},
+		{
+			"alias": "3_stairwell_4_hallway_exit",
+			"area": {
+				"alias": "4_hallway",
+				"position": [3008, -32]
+			}
+		}
+	],
+	"music": "hallway",
+	"ambience": null
+}

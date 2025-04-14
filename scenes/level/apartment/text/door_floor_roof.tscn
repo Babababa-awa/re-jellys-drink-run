@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmi4cok8u07t2"]
+
+[ext_resource type="TileSet" uid="uid://dkq0x8vybft0f" path="res://Resources/TileSets/apartment.tres" id="1_c6gtx"]
+
+[node name="DoorFloorRoof" type="TileMap"]
+tile_set = ExtResource("1_c6gtx")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65535, 983040, 10, -65536, 983040, 2)

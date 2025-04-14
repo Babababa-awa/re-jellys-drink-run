@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdqsnaph7j08w"]
+
+[ext_resource type="Script" path="res://scenes/hud.gd" id="1_asei3"]
+[ext_resource type="PackedScene" uid="uid://d4cnaxp6g4f2h" path="res://scenes/hud/player_hunger.tscn" id="2_crkau"]
+[ext_resource type="PackedScene" uid="uid://c5sgye5uu14bp" path="res://scenes/hud/player_health.tscn" id="3_0s605"]
+[ext_resource type="PackedScene" uid="uid://celc1gq31jyqs" path="res://scenes/hud/player_items.tscn" id="4_yb3k7"]
+
+[node name="Hud" type="Node2D"]
+script = ExtResource("1_asei3")
+
+[node name="PlayerHunger" parent="." instance=ExtResource("2_crkau")]
+unique_name_in_owner = true
+
+[node name="PlayerAnxiety" parent="." instance=ExtResource("3_0s605")]
+unique_name_in_owner = true
+position = Vector2(640, 0)
+
+[node name="PlayerItems" parent="." instance=ExtResource("4_yb3k7")]
+unique_name_in_owner = true

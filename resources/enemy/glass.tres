@@ -1,0 +1,14 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://ch4rbun5l34q"]
+
+[ext_resource type="Texture2D" uid="uid://23563h3ny2k2" path="res://assets/image/unit/enemy/glass.png" id="1_8joca"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j6iiq"]
+texture = ExtResource("1_8joca")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_j6iiq")

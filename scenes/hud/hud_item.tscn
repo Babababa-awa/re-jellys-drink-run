@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://wb3chxoe4nqn"]
+
+[ext_resource type="Script" path="res://scenes/hud/hud_item.gd" id="1_krw25"]
+[ext_resource type="TileSet" uid="uid://c7yqi5tsq2xlq" path="res://resources/hud_item_box.tres" id="2_bt6ul"]
+[ext_resource type="TileSet" uid="uid://dqx6jkj8wpoka" path="res://resources/items.tres" id="3_pue3g"]
+
+[node name="HudItem" type="Node2D"]
+script = ExtResource("1_krw25")
+
+[node name="ItemUnder" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0)
+tile_set = ExtResource("2_bt6ul")
+
+[node name="Item" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+position = Vector2(8, 8)
+scale = Vector2(1.5, 1.5)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = ExtResource("3_pue3g")
+
+[node name="ItemOver" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 0, 0, 0, 0)
+tile_set = ExtResource("2_bt6ul")

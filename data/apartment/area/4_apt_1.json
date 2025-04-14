@@ -1,0 +1,19 @@
+{
+	"alias": "4_apt_1",
+	"name": "Apartment 4-1",
+	"doors": [
+		{
+			"alias": "4_apt_1_4_hallway_exit",
+			"area": {
+				"alias": "4_hallway",
+				"position": [1536, -32]
+			}
+		}
+	],
+	"items": [
+		{"alias": "anxiety_medication", "position": [48, -60]},
+		{"alias": "moo_deng_jerky", "position": [856, -80]}
+	],
+	"music": "room",
+	"ambience": null
+}

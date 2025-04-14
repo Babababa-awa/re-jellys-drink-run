@@ -1,0 +1,16 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cwaxgxxethcec"]
+
+[ext_resource type="Texture2D" uid="uid://do4b1cm6vsaxx" path="res://assets/image/level/apartment/fan_medium.png" id="1_ho6ej"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ky3m"]
+texture = ExtResource("1_ho6ej")
+texture_region_size = Vector2i(48, 48)
+0:0/animation_frame_0/duration = 0.125
+0:0/animation_frame_1/duration = 0.125
+0:0/animation_frame_2/duration = 0.125
+0:0/animation_frame_3/duration = 0.125
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(48, 48)
+sources/0 = SubResource("TileSetAtlasSource_3ky3m")

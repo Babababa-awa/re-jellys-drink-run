@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://p74dn1ojqcv8"]
+
+[ext_resource type="Texture2D" uid="uid://we8wlsgyg60w" path="res://assets/image/ambience/sky.png" id="1_cdkdh"]
+[ext_resource type="Script" path="res://Scenes/Backgrounds/sky.gd" id="1_tmoit"]
+[ext_resource type="Texture2D" uid="uid://5w02q12ro5ql" path="res://assets/image/ambience/moon.png" id="2_k6c3r"]
+[ext_resource type="Texture2D" uid="uid://g0tmaq8m0st8" path="res://assets/image/ambience/lightning1.png" id="4_655pc"]
+[ext_resource type="Texture2D" uid="uid://byok2ydnixgxi" path="res://assets/image/ambience/lightning2.png" id="5_en2nn"]
+
+[node name="Sky" type="ParallaxBackground"]
+script = ExtResource("1_tmoit")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture = ExtResource("1_cdkdh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(512, 0)
+texture = ExtResource("1_cdkdh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(1024, 0)
+texture = ExtResource("1_cdkdh")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+position = Vector2(-83, -80)
+motion_scale = Vector2(0.25, 0.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(78, 63)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_k6c3r")
+
+[node name="SpriteLightning1" type="Sprite2D" parent="ParallaxLayer2"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(314, 80)
+scale = Vector2(2, 2)
+texture = ExtResource("4_655pc")
+
+[node name="SpriteLightning2" type="Sprite2D" parent="ParallaxLayer2"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(314, 80)
+scale = Vector2(2, 2)
+texture = ExtResource("5_en2nn")

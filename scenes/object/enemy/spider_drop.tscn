@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=4 uid="uid://k123oif6kprr"]
+
+[ext_resource type="Script" path="res://scenes/object/enemy/spider_drop.gd" id="1_qfve5"]
+[ext_resource type="PackedScene" uid="uid://iuwfdeqidksi" path="res://scenes/unit/enemy/spider.tscn" id="2_2nqyq"]
+[ext_resource type="TileSet" uid="uid://ixn5gvkvawsq" path="res://resources/level/apartment/decals.tres" id="2_b06sl"]
+[ext_resource type="TileSet" uid="uid://78r07r4s5fac" path="res://resources/field.tres" id="3_esy85"]
+
+[node name="SpiderDrop" type="Node2D"]
+script = ExtResource("1_qfve5")
+
+[node name="Field" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+tile_map_data = PackedByteArray("AAD/////AAABAAQAAAAAAP//AAABAAQAAAAAAP7/AAABAAQAAAD///7/AAABAAQAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wEAAAABAAMAAAD//wIAAAABAAMAAAAAAAEAAAABAAMAAAAAAAIAAAABAAMAAAA=")
+tile_set = ExtResource("3_esy85")
+
+[node name="Decals" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD/////AAAAAAAAAAAAAP//AAABAAAAAAA=")
+tile_set = ExtResource("2_b06sl")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Line2DWeb" type="Line2D" parent="Marker2D"]
+unique_name_in_owner = true
+points = PackedVector2Array(0.5, 0, 0.5, 1)
+width = 1.0
+
+[node name="Spider" parent="." instance=ExtResource("2_2nqyq")]
+unique_name_in_owner = true
