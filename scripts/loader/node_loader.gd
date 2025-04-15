@@ -54,7 +54,7 @@ func _is_loading_node(path: String) -> bool:
 			
 	return false
 	
-func get_node(path: String) -> Node2D:
+func get_node(path: String) -> Node:
 	var node = _get_free_node(path)
 	
 	if node != null:
@@ -88,7 +88,7 @@ func get_node(path: String) -> Node2D:
 	return node_instance
 	
 
-func _get_free_node(path: String) -> Node2D:
+func _get_free_node(path: String) -> Node:
 	if not nodes.has(path):
 		return null
 	
@@ -97,8 +97,22 @@ func _get_free_node(path: String) -> Node2D:
 			return node
 			
 	return null
+	
+func clear_node(node: Node) -> void:
+	free_node(node)
+	_remove_node(node)
+	
+func _remove_node(node: Node) -> void:
+	var path = node.scene_file_path
+	
+	if nodes.has(path):
+		for index in nodes[path].size():
+			if nodes[path][index] == node:
+				Core.game.remove_level_child(nodes[path][index])
+				nodes[path].remove_at(index)
+				break
 
-func free_node(node: Node2D) -> void:
+func free_node(node: Node) -> void:
 	if _in_use.has(node.get_instance_id()):
 		_in_use.erase(node.get_instance_id())
 		node.position = Core.DEAD_ZONE
@@ -106,7 +120,7 @@ func free_node(node: Node2D) -> void:
 		if node is BaseNode2D or node is BaseCharacterBody2D:
 			node.stop()
 
-func free_nodes(nodes_: Array[Node2D]) -> void:
+func free_nodes(nodes_: Array[Node]) -> void:
 	for node in nodes_:
 		free_node(node)
 		

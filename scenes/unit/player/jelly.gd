@@ -155,6 +155,9 @@ func _update_starving() -> void:
 	
 
 func _play_sounds(delta_: float) -> void:
+	if Core.game.is_win or Core.game.is_lose:
+		return
+		
 	if unit_movement == Core.UnitMovement.CLIMBING and is_moving():
 		if current_ladder_climbing_delta > 0.5:
 			current_ladder_climbing_delta = 0.0
@@ -219,20 +222,28 @@ func _update_sprite_state() -> void:
 		
 	var suffixes_: Array[StringName] = []
 	
+	if Core.game.is_win:
+		play(&"win", Core.UnitDirection.NONE, suffixes_)
+		return
+	
+	if Core.game.is_lose:
+		play(&"lose", Core.UnitDirection.NONE, suffixes_)
+		return
+		
+	
 	if move == null:
-		play(&"idle", Core.UnitDirection.NONE)
-		animations.set_flip_h(false)
+		play(&"idle", Core.UnitDirection.NONE, suffixes_)
 		return
 	
 	if unit_movement == Core.UnitMovement.CLIMBING:
 		if is_moving():
 			#TODO: Fix climbing up animations
 			if unit_direction == Core.UnitDirection.UP:
-				play(&"climb", Core.UnitDirection.DOWN)
+				play(&"climb", Core.UnitDirection.DOWN, suffixes_)
 			else:
-				play(&"climb", unit_direction)
+				play(&"climb", unit_direction, suffixes_)
 		else:
-			play(&"climb", Core.UnitDirection.NONE)
+			play(&"climb", Core.UnitDirection.NONE, suffixes_)
 		return
 	
 	if is_knife_stab:

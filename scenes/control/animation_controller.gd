@@ -13,7 +13,7 @@ func play(
 		unit_direction_,
 		suffixes_
 	)
-		
+
 	for child in get_children():
 		if not child is AnimatedSprite2D:
 			continue
@@ -37,6 +37,7 @@ func _get_animation_names(
 	suffixes_: Array[StringName] = []
 ) -> Array:
 	var directions = Core.PLAY_DIRECTIONS[unit_direction_]
+	var add_animation_name_: bool = true
 	
 	var animation_names_: Array = []
 	var animation_suffix_names_: Dictionary = {}
@@ -75,6 +76,8 @@ func _get_animation_names(
 					flip_v = true
 					
 		if animation_name_ == direction:
+			add_animation_name_ = false
+			
 			animation_names_.push_back({
 				"name": animation_name_,
 				"flip_h": flip_h,
@@ -100,7 +103,20 @@ func _get_animation_names(
 					"flip_h": flip_h,
 					"flip_v": flip_v,
 				})
-	
+		
+	if add_animation_name_:
+		animation_names_.push_back({
+			"name": animation_name_,
+			"flip_h": false,
+			"flip_v": false,
+		})
+		
+		for suffix_ in suffixes_:
+			animation_suffix_names_[suffix_].push_back({
+				"name": animation_name_ + &"_" + suffix_,
+				"flip_h": false,
+				"flip_v": false,
+			})
 	
 	var result_animation_names: Array = []
 	

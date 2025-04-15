@@ -53,6 +53,9 @@ func process(delta: float) -> void:
 		if state.has(Core.ActorState.UPDATE, &"damage"):
 			_update_state(Core.ActorState.NONE)
 		return
+		
+	if Core.game.is_win or Core.game.is_lose:
+		return
 
 	_handle_damage(delta)
 	

@@ -96,6 +96,9 @@ func process(delta: float) -> void:
 		
 	if not can_unit_input():
 		return
+		
+	if Core.game.is_win or Core.game.is_lose:
+		return
 	
 	_action_move_selection_left()
 	_action_move_selection_right()
@@ -250,10 +253,10 @@ func _can_pick_up_level_item(level_item_value_: LevelItemValue) -> bool:
 
 	return true
 	
-func use_item(item_value_: ItemValue) -> void:
+func use_item(item_value_: ItemValue) -> bool:
 	if not can_use_item(item_value_):
 		use_error.emit(item_value_, Core.Error.ACTOR_RESTRICTION)
-		return
+		return false
 		
 	signal_can_use = true
 	signal_use_handled = false
@@ -262,24 +265,22 @@ func use_item(item_value_: ItemValue) -> void:
 	
 	if signal_can_use == false:
 		use_error.emit(item_value_, Core.Error.GAME_RESTRICTION)
-		return
+		return false
 	
 	if not signal_use_handled:
 		if not _use_item(item_value_):
 			use_error.emit(item_value_, Core.Error.UNHANDLED)
-			return
-	
-	remove_selected_item()
+			return false
 
 	use_after.emit(item_value_)
-
+	return true
 		
-func use_selected_item() -> void:
+func use_selected_item() -> bool:
 	var item_value_ = get_selected_item()
 	
 	if not can_use_selected_item():
 		use_error.emit(item_value_, Core.Error.ACTOR_RESTRICTION)
-		return
+		return false
 
 	signal_can_use = true
 	signal_use_handled = false
@@ -288,16 +289,17 @@ func use_selected_item() -> void:
 	
 	if signal_can_use == false:
 		use_error.emit(item_value_, Core.Error.GAME_RESTRICTION)
-		return
+		return false
 	
 	if not signal_use_handled:
 		if not _use_item(item_value_):
 			use_error.emit(item_value_, Core.Error.UNHANDLED)
-			return
+			return false
 	
 	remove_selected_item()
 
 	use_after.emit(item_value_)
+	return true
 
 func _use_item(item_value_: ItemValue) -> bool:
 	if item_value_.type == Core.ItemType.FOOD:
@@ -442,7 +444,7 @@ func get_pick_up_level_item() -> LevelItemValue:
 			continue
 	
 		var current_position_: Vector2 = level_item_value_.node.get_align_global_position(item_alignment)
-		var test_position_: Vector2 = Core.get_closest_vector2(unit_position_, closest_position_, 	current_position_)
+		var test_position_: Vector2 = Core.get_closest_vector2(unit_position_, closest_position_, current_position_)
 		
 		if test_position_ == current_position_:
 			closest_level_item_value_ = level_item_value_
@@ -455,8 +457,8 @@ func _pick_up_item(level_item_value_: LevelItemValue) -> bool:
 		return false
 		
 	if not has_empty():
-		if use_action_enabled:
-			use_item(level_item_value_.item)
+		if use_action_enabled and use_item(level_item_value_.item):
+			Core.level.items.remove_item(level_item_value_)
 			return true
 		
 		var item_value_ = get_selected_item()

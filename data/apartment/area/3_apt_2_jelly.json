@@ -11,6 +11,11 @@
 		}
 	],
 	"items": [
+		{"alias": "cigarettes", "position": [200, -80]},
+		{"alias": "cigarettes", "position": [250, -80]},
+		{"alias": "cigarettes", "position": [300, -80]},
+		{"alias": "cigarettes", "position": [350, -80]},
+		
 		{"alias": "kitchen_knife", "position": [868, -102]},
 		{"alias": "meal_replacement", "position": [1000, -80], "visible": false, "meta": {"object": "fridge"}}
 	],

@@ -142,7 +142,14 @@ func _update_used(node_: Node) -> void:
 		
 	%Animations.set_texture_variant(&"blood")
 	is_used = true
-		
+
+func set_unit_direction_x(unit_direction_x_: Core.UnitDirection) -> void:
+	# Only set if left or right since other directions not supported
+	if (unit_direction_x_ == Core.UnitDirection.LEFT or
+		unit_direction_x_ == Core.UnitDirection.RIGHT
+	):
+		super.set_unit_direction_x(unit_direction_x_)
+
 func _enable_attack_area(alias_) -> void:
 	if alias_ == &"stab":
 		if unit_direction_x == Core.UnitDirection.LEFT:

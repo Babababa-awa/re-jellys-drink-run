@@ -111,13 +111,13 @@ func remove_mode(mode_: StringName, remove_from_children: bool = false) -> void:
 				child.remove_mode(mode_)
 
 func get_align_position(alignment_: Core.Alignment) -> Vector2:
-	return position + Core.get_align_offset(get_rect(), alignment_)
+	return position - Core.get_align_offset(get_scale_rect(), alignment_)
 
 func get_align_global_position(alignment_: Core.Alignment) -> Vector2:
-	return global_position + Core.get_align_offset(get_rect(), alignment_)
+	return global_position - Core.get_align_offset(get_scale_rect(), alignment_)
 
 func get_align_offset(alignment_: Core.Alignment) -> Vector2:
-	return Core.get_align_offset(get_rect(), alignment_)
+	return Core.get_align_offset(get_scale_rect(), alignment_)
 
 func get_rect() -> Rect2:
 	var bounds_area = get_node_or_null("%Area2DRect")
@@ -126,3 +126,10 @@ func get_rect() -> Rect2:
 		return Core.get_collision_rect(bounds_area)
 
 	return Core.get_collision_rect(self)
+	
+func get_scale_rect() -> Rect2:
+	var rect_: Rect2 = get_rect()
+	
+	rect_.size *= scale
+	
+	return rect_

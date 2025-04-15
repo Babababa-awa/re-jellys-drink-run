@@ -2,7 +2,9 @@ extends BaseActor
 class_name SpeechActor
 
 var unit: BaseCharacterBody2D
-var timer = CooldownTimer.new(0.0)
+var _timer = CooldownTimer.new(0.0)
+
+var is_saying: bool = false
 
 func _init(unit_: BaseCharacterBody2D, enabled_: bool = true) -> void:
 	super._init(&"speech", enabled_)
@@ -14,10 +16,11 @@ func process(delta_: float) -> void:
 	if not can_process():
 		return
 		
-	timer.process(delta_)
+	_timer.process(delta_)
 	
-	if timer.is_complete:
-		timer.stop()
+	if _timer.is_complete:
+		_timer.stop()
+		is_saying = false
 		var speech_ = unit.get_node_or_null("%Speech")
 		if speech_ is BaseSpeech:
 			speech_.visible = false
@@ -35,7 +38,8 @@ func say(line_: SpeechValue) -> bool:
 	speech_.refresh()
 	speech_.visible = true
 	
-	timer.stop()
-	timer.delta = line_.delta
-	timer.start()
+	_timer.stop()
+	_timer.delta = line_.delta
+	_timer.start()
+	is_saying = true
 	return true

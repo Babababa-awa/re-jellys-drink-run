@@ -4,7 +4,7 @@ class_name LoseActor
 var is_lose: bool = false
 var is_in_lose_area: bool = false
 
-var lose_cooldown_delta: float = 1.0
+var lose_cooldown_delta: float = 0.0
 var _lose_cooldown: CooldownTimer = null
 
 func _init(unit_: BaseUnit, enabled: bool = true) -> void:
@@ -12,8 +12,10 @@ func _init(unit_: BaseUnit, enabled: bool = true) -> void:
 
 func ready() -> void:
 	var lose_area = unit.get_node_or_null("%Area2DLose")
-	
-	if lose_area != null:
+		
+	if lose_area == null:
+		_lose_cooldown = null
+	else:
 		_lose_cooldown = CooldownTimer.new(lose_cooldown_delta)
 
 		lose_area.connect(&"body_entered", _on_lose_body_entered)

@@ -50,7 +50,7 @@ func reset_area() -> void:
 			area.door_opened.disconnect(_on_door_opened)
 			
 		items.depopulate_area_items(area.alias)
-		Core.nodes.free_node(area)
+		Core.nodes.clear_node(area)
 		
 func change_player_area(
 	area_alias_: String, 

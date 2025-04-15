@@ -37,6 +37,8 @@ var _internal_crouch_direction: Vector2 = Vector2.ZERO
 
 func _init(unit_: BaseUnit, enabled: bool = true) -> void:
 	super._init(unit_, &"move", enabled)
+	unit_modes.push_back(Core.UnitMode.NORMAL)
+	unit_modes.push_back(Core.UnitMode.CLIMBING)
 
 func reset(reset_type_: Core.ResetType) -> void:
 	super.reset(reset_type_)
@@ -126,12 +128,12 @@ func _update_unit_direction() -> void:
 	var previous_unit_direction_x: Core.UnitDirection = unit.unit_direction_x
 	var previous_unit_direction_y: Core.UnitDirection = unit.unit_direction_y
 	
-	if locked_direction_x != Core.UnitDirection.NONE:
-		unit.set_unit_direction_x(locked_direction_x)
-	elif _internal_crouch_direction.x > 0.0:
+	if _internal_crouch_direction.x > 0.0:
 		unit.set_unit_direction_x(Core.UnitDirection.RIGHT)
 	elif _internal_crouch_direction.x < 0.0:
 		unit.set_unit_direction_x(Core.UnitDirection.LEFT)
+	elif locked_direction_x != Core.UnitDirection.NONE:
+		unit.set_unit_direction_x(locked_direction_x)
 	elif unit.velocity.x > 0.0:
 		unit.set_unit_direction_x(Core.UnitDirection.RIGHT)
 	elif unit.velocity.x < 0.0:

@@ -1,0 +1,7 @@
+{
+	"alias": "lose",
+	"name": "Lose",
+	"ambience": "rain",
+	"outside": true,
+	"lightning": true
+}

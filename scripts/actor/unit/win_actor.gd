@@ -4,8 +4,8 @@ class_name WinActor
 var is_win: bool = false
 var is_in_win_area: bool = false
 
-const WIN_COOLDOWN_DELTA = 0.0
-var _win_cooldown: CooldownTimer
+var win_cooldown_delta: float = 0.0
+var _win_cooldown: CooldownTimer = null
 
 func _init(unit_: BaseUnit, enabled_: bool = true) -> void:
 	super._init(unit_, &"win", enabled_)
@@ -16,7 +16,7 @@ func ready() -> void:
 	if win_area == null:
 		_win_cooldown = null
 	else:
-		_win_cooldown = CooldownTimer.new(WIN_COOLDOWN_DELTA)
+		_win_cooldown = CooldownTimer.new(win_cooldown_delta)
 
 		win_area.connect(&"body_entered", _on_win_body_entered)
 		win_area.connect(&"body_exited", _on_win_body_exited)

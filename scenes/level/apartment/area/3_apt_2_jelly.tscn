@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bu22kyd3cdajg"]
+[gd_scene load_steps=13 format=4 uid="uid://bu22kyd3cdajg"]
 
 [ext_resource type="Script" path="res://scenes/level/apartment/area/3_apt_2_jelly.gd" id="1_ild27"]
 [ext_resource type="TileSet" uid="uid://dki5y3qh21w82" path="res://resources/physics.tres" id="2_4g55n"]
@@ -13,6 +13,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnr1r"]
 size = Vector2(160, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3rtj"]
+size = Vector2(72, 8)
 
 [node name="3Apt2Jelly" type="Node2D"]
 script = ExtResource("1_ild27")
@@ -74,6 +77,18 @@ collision_mask = 64
 position = Vector2(80, -80)
 shape = SubResource("RectangleShape2D_qnr1r")
 
+[node name="Area2DWife" type="Area2D" parent="."]
+z_index = 6
+z_as_relative = false
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DWife"]
+position = Vector2(416, -36.25)
+shape = SubResource("RectangleShape2D_r3rtj")
+
 [connection signal="fridge_closed" from="Fridge" to="." method="_on_fridge_fridge_closed"]
 [connection signal="fridge_opened" from="Fridge" to="." method="_on_fridge_fridge_opened"]
 [connection signal="body_entered" from="Area2DTalk" to="." method="_on_area_2d_talk_body_entered"]
+[connection signal="body_entered" from="Area2DWife" to="." method="_on_area_2d_wife_body_entered"]
+[connection signal="body_exited" from="Area2DWife" to="." method="_on_area_2d_wife_body_exited"]

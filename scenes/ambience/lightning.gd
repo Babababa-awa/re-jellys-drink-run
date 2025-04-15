@@ -9,7 +9,7 @@ var is_lightning: bool = false
 var _lightning_index: int = -1
 var _lightning_alpha_delta: float = 0.0
 
-var lightning_cooldown_delta: float = 20.0
+var lightning_cooldown_delta: float = 15.0
 var lightning_hide_delta: float = 0.4
 var _lightning_cooldown: CooldownTimer
 

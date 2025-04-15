@@ -2,7 +2,7 @@ extends UnitActor
 class_name HungerActor
 
 var hunger: float = 100.0
-var hunger_delta: float = 0.2
+var hunger_delta: float = 0.4
 var max_hunger: float = 100.0
 
 func _init(unit_: BaseUnit, enabled: bool = true) -> void:
@@ -26,6 +26,13 @@ func process(delta: float) -> void:
 		return
 		
 	if is_unit_killed():
+		return
+		
+	if Core.game.is_win or Core.game.is_lose:
+		return
+		
+	# Prevent starving in menu
+	if Core.level != null and Core.level.level_mode == Core.LevelMode.MENU:
 		return
 
 	# Slowly drain hunger over time

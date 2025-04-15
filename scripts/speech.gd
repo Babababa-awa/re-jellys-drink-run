@@ -26,10 +26,19 @@ func say(line_: SpeechValue, queue_: bool = false) -> void:
 			say(line_)
 		return
 	
-	if line_.target is BaseCharacterBody2D:
+	if line_.target is BaseUnit:
 		var speech_actor = line_.target.get_actor_or_null(&"speech")
 		if speech_actor != null:
 			if (speech_actor.say(line_)):
 				return
 
 	#TODO: Fallback or general overlay system?
+	
+func is_saying(target_: Node2D) -> bool:
+	if target_ is BaseUnit:
+		var speech_actor = target_.get_actor_or_null(&"speech")
+		if speech_actor != null:
+			return speech_actor.is_saying
+			
+	return false
+		
